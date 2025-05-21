@@ -13,7 +13,7 @@ func TestGetCapital (t *testing.T) {
 	}{
 		{"real province", "Chaco", "Resistencia"},
 		{"case and accent marks", "sÁnTá fÉ", "Santa Fe"},
-		{"another word", "Chiavenato", "No se encontró la provincia Chiavenato"},
+		{"another word", "Chiavenato", ""},
 	}
 	
 	for _, tt := range tests {
@@ -49,5 +49,5 @@ func TestRemoveAccentMarks (t *testing.T) {
 				t.Errorf("RemoveActionMarks(%s) = %s; want %s", tt.entryString, receivedString, tt.expectedString)
 			}
 		})
-		}
+	}
 } 
